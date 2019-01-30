@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login Page</title>
+        {% block scripts %}
+        <script src={{url_for('static', filename='js/jsencrypt.js')}}></script>
+        <script src={{url_for('static', filename='js/jquery.min.js')}}></script>
+        {% endblock scripts %}
+        <script> 
+            var pubkey = 'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDW2m8ahyD859xHMTWbiu3H2u1xcxW5XROQzU+oA55yEfSH+HF0c1F+ri/yb4dgU+tfzf4WEbM/Ek3LNI0q8eejTBeiSDn0Ny4dNNhtGkQXbpbICvyf4s4fHdKsj+V8IWr2x5p0VB8wt0C7YzEd1JDDZQMZ4PLFSK3Jm8mBtLNMAQIDAQAB'
+            function submit1() {
+                // Encrypt with the public key...
+                var encrypt = new JSEncrypt()
+                encrypt.setPublicKey(pubkey) // pubkey是公钥内容
+                var encrypted = encrypt.encrypt($('#pass').val())
+                $('#pass').val(encrypted)
+                $('#loginForm').submit()
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Login Page</h1>
+        <form method="post" id="loginForm" action="/FlaskTutorial">
+            <input type="text" name="email" placeholder="Email Address" />
+            <br/>
+            <input type="password" id = "pass" name="pass" placeholder="Password" />
+            <br /> 
+            <input type="button" value="Submit" name="ok" onclick="submit1()" />
+        </form>
+    </body>
+</html>
