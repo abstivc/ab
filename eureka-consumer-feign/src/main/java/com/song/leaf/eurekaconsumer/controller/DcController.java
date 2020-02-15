@@ -17,4 +17,9 @@ public class DcController {
     public String dc() {
         return dcClient.consumer();
     }
+
+    @GetMapping("/router")
+    public String route() {
+        return "This is feign";
+    }
 }

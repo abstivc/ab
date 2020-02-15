@@ -1,0 +1,7 @@
+127.0.0.1 - - [07/Feb/2020:18:08:55 +0800] "GET / HTTP/1.1" 404 - http-bio-8080-exec-1 0
+127.0.0.1 - - [07/Feb/2020:18:09:04 +0800] "GET /demo/query HTTP/1.1" 404 - http-bio-8080-exec-3 0
+127.0.0.1 - - [07/Feb/2020:18:09:13 +0800] "GET /springdemo/demo/query HTTP/1.1" 200 1698 http-bio-8080-exec-4 18
+127.0.0.1 - - [07/Feb/2020:18:09:13 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-6 0
+127.0.0.1 - - [07/Feb/2020:18:13:40 +0800] "GET /springdemo/demo/query HTTP/1.1" 200 1698 http-bio-8080-exec-1 22591
+127.0.0.1 - - [07/Feb/2020:18:14:10 +0800] "GET /springdemo/demo/query HTTP/1.1" 200 1698 http-bio-8080-exec-3 12351
+127.0.0.1 - - [07/Feb/2020:18:14:27 +0800] "GET /springdemo/demo/query?name=123 HTTP/1.1" 200 12 http-bio-8080-exec-5 8311

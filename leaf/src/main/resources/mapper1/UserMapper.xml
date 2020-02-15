@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.song.leaf.dao01.UserDao1" >
+
+    <select id="selectByPrimaryKey" resultType="com.song.leaf.bean.User" parameterType="java.lang.String" >
+        select
+        id,
+        name
+        from t_user
+        where id = #{id}
+    </select>
+
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(1) from t_user
+    </select>
+
+</mapper>

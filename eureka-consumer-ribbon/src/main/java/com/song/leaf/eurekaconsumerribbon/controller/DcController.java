@@ -18,4 +18,9 @@ public class DcController {
     public String dc() {
         return restTemplate.getForObject("http://eureka-client/dc", String.class);
     }
+
+    @GetMapping("/router")
+    public String route() {
+        return "This is ribbon";
+    }
 }
