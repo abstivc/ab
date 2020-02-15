@@ -30,7 +30,7 @@
 
         <!-- 在properties中统一控制依赖包的版本，更清晰-->
         <dubbo.version>2.6.2</dubbo.version>
-        <zk.version>3.4.5</zk.version>
+        <zk.version>3.4.14</zk.version>
         <zkclient.version>0.1</zkclient.version>
     </properties>
 
