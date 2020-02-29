@@ -21,7 +21,6 @@
     <modules>
         <module>springboot-dubbo-server</module>
         <module>springboot-dubbo-client</module>
-        <module>leecode</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -33,27 +32,30 @@
         <zk.version>3.4.5</zk.version>
         <zkclient.version>0.1</zkclient.version>
     </properties>
-
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
     <dependencyManagement>   <!--dependencyManagement用于管理依赖版本号-->
         <dependencies>
+
             <!--删除spring-boot-starter和spring-boot-starter-test，-->
             <!--因为parent中继承的祖先中已经有了，并且一般dependencyManagement管理的依赖都要写版本号-->
-            <!--<dependency>
-               <groupId>org.springframework.boot</groupId>
-               <artifactId>spring-boot-starter</artifactId>
-            </dependency>
-
-            <dependency>
-               <groupId>org.springframework.boot</groupId>
-               <artifactId>spring-boot-starter-test</artifactId>
-               <scope>test</scope>
-            </dependency>-->
-
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-                <version>1.5.9.RELEASE</version>
-            </dependency>
 
             <!--新增后续dubbo项目中所需依赖，dubbo、zk-->
             <dependency>
