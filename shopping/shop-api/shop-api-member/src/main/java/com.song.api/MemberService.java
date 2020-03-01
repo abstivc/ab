@@ -14,4 +14,11 @@ public interface MemberService {
 
     @RequestMapping("/registerUser")
     ResponseBase registerUser(@RequestBody UserEntity userEntity);
+
+    @RequestMapping("/login")
+    ResponseBase login(@RequestBody UserEntity userEntity);
+
+    // 使用token进行登陆
+    @RequestMapping("/findUserByToken")
+    ResponseBase findUserByToken(String token);
 }

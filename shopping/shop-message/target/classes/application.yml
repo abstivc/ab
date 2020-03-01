@@ -9,7 +9,7 @@ spring:
   application:
     name: member
   redis:  ##redis连接信息
-    host: 192.168.120.131
+    host: 192.168.120.132
     password: 123456
     port: 6379
     pool:
@@ -20,7 +20,7 @@ spring:
   #数据库连接信息
   datasource:
         name: test
-        url: jdbc:mysql://192.168.120.131:3306/song-member?useUnicode=true&characterEncoding=UTF-8
+        url: jdbc:mysql://192.168.120.132:3306/song-member?useUnicode=true&characterEncoding=UTF-8
         username: root
         password: root
         # 使用druid数据源
@@ -41,10 +41,25 @@ spring:
         maxOpenPreparedStatements: 20
   ##activemq连接信息
   activemq:
-    broker-url: tcp://192.168.120.131:61616
+    broker-url: tcp://192.168.120.132:61616
     in-memory: true
     pool:
       enabled: false
+  mail:
+    host: smtp.qq.com
+    username: 649992318@qq.com
+    password: mlijoshwlfvmbefg
+    enable:  true
+    smtp:
+      auth: true
+    starttls:
+      enable: true
+      required: true
 ##队列
 messages:
   queue: messages_queue
+
+########################################
+msg:
+  subject: 测试网站提示您，会员注册成功邮件。
+  text:  恭喜您的账户{},注册成功! www.baidi.com
