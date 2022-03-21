@@ -28,7 +28,7 @@
         <java.version>1.8</java.version>
 
         <!-- 在properties中统一控制依赖包的版本，更清晰-->
-        <dubbo.version>2.6.2</dubbo.version>
+        <dubbo.version>2.6.9</dubbo.version>
         <zk.version>3.4.5</zk.version>
         <zkclient.version>0.1</zkclient.version>
     </properties>
